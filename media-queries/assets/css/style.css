@@ -1,0 +1,221 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/*version mobile*/
+.container {
+    display: grid;
+    grid-template-areas: 
+    'navbar'
+    'search'
+    'principal'
+    'footer';
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 8fr 1fr;
+    padding: auto;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+}
+.navbar {
+    grid-area: navbar;
+    background-color: dodgerblue;
+    color: azure;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+}
+.nav {
+    display: none;
+}
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.search {
+    grid-area: search;
+    background-color:rgb(209, 237, 248);
+    padding-bottom: 5px;
+    margin-top: 0px;
+}
+.listitem1 {
+    text-decoration:none;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: blue;
+    background-color: white;
+}
+.listitem1 :hover {
+    background-color: lightsteelblue;
+}
+.listitem1 :hover > .listitem2 {
+    display:flex;
+}
+.listitem2 {
+    list-style: none;
+    border-bottom: blue;
+    display: none;
+    position: absolute;
+    background-color: white;
+}
+.principal {
+    grid-area: principal;
+    background-color: white;
+}
+.scrollpage {
+    display: flex;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    flex-direction: column;
+    max-height: 340px;
+}
+.item {
+    margin: auto;
+    padding: auto;
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    height: 50px;
+    align-items: center;
+}
+.nxt-prv {
+    width: 40px;
+    height: 40px;
+    border-bottom: 1px black;
+    margin: 0px;
+    border-bottom-width: 1px;
+    text-decoration: none;
+    background-color: white;
+}
+img {
+    max-width: 420px;
+    padding-top: 50px;
+}
+.button1 {
+    width: 200px;
+    background-color: white;
+}
+.button2 {
+    width: 200px;
+    background-color: white;
+}
+.footer {
+    grid-area: footer;
+    background-color: midnightblue;
+    color: azure;
+}
+/*version desktop*/
+@media screen and (min-width: 576px) {
+    .container {
+        display: grid;
+        grid-template-areas: 
+        'navbar search'
+        'navbar principal'
+        'footer principal';
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 1fr 7fr 1fr;
+    }
+    .navbar {
+        grid-area: navbar;
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+    }
+    .title {
+        padding-bottom: 25px;
+    }
+    .bar {
+        display: none;
+    }
+    .nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .footer {
+        grid-area: footer;
+        background-color: midnightblue;
+        color: azure;
+    }
+    .search {
+        grid-area: search;
+        width: 80vw;
+        height: 10vh;
+        background-color:rgb(209, 237, 248);
+    }
+    .button1 {
+        width: 50vw;
+    }
+    .nxt-prv {
+        grid-area: nxt-prv;
+    }
+    .scrollpage {
+        grid-area: scrollpage;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 5px;
+        justify-content: center;
+        margin: auto;
+        max-height: 520px;
+    }
+    .item {
+        width: 180px;
+        height: 180px;
+        margin: auto;
+        padding: auto;
+    }
+    img {
+        max-width: 175px;
+    }
+    .car1 {
+        margin-top: 48px;
+    }
+    .car2 {
+        margin-top: 29px;
+    }
+    .car3 {
+        margin-top: 36px;
+    }
+    .car5 {
+        margin-top: 34px;
+    }
+    .car6 {
+        margin-top: 33px;
+    }
+    .car7 {
+        margin-top: 10px;
+    }
+}
+/*version tablet
+@media screen and (max-width: 992px){
+    
+}
+    /* todo
+    .container {
+        grid-template-areas: 
+        'navbar navbar'
+        'search principal'
+        'footer footer';
+    }
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .bar {
+        display: none;
+    }
+    .scrollpage {
+        
+    }
+}*/
